@@ -8,7 +8,7 @@ bestSum(8,[2,3,5]) = > [5,3]
 '''
 
 
-def bestSum(targetSum, numbers, memo = {}):
+def bestSum(targetSum, numbers, memo={}):
     if targetSum in memo:
         return memo[targetSum]
     if targetSum == 0:
@@ -31,4 +31,5 @@ def bestSum(targetSum, numbers, memo = {}):
 print(bestSum(7, [5, 3, 4, 7]))  # [7]
 print(bestSum(8, [2, 3, 5]))  # [3,5]
 print(bestSum(8, [1, 4, 5]))  # [4,4]
+print(bestSum(8, [1,2, 3, 5,6,8])) #[2,6]
 print(bestSum(100, [1, 2, 5, 25]))  # [25,25,25,25]

@@ -19,7 +19,7 @@ def bestSum(targetSum, numbers):
         res = bestSum(remain, numbers)
         if res != None:
             res.append(num)
-            # if the combination is shorter than the shortest then update the veriale
+            # if the combination is shorter than the shortest then update the veriable
             if shortestComb is None or len(res) < len(shortestComb):
                 shortestComb = res
     return shortestComb
@@ -28,4 +28,5 @@ def bestSum(targetSum, numbers):
 print(bestSum(7, [5, 3, 4, 7]))  # [7]
 print(bestSum(8, [2, 3, 5]))  # [3,5]
 print(bestSum(8, [1, 4, 5]))  # [4,4]
+print(bestSum(8, [1,2, 3, 5,6])) #[2,6]
 print(bestSum(100, [1, 2, 5, 25]))  # [25,25,25,25]
